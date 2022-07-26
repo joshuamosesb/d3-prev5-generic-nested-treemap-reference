@@ -1,0 +1,23 @@
+{
+    "title": "Nested Treemap",
+    "root-name": "ROOT",
+    "tree-depth": 0,
+    "data-file": "../data/tech_lp_cohort_details_treemap.csv",    
+    "group-keys":["Technology", "LP", "Cohort"],
+    "metric-rollup-map": {"ICT Average": {"op": "mean", "format":".1f", "suffix": "%"}, 
+        "CC Average": {"op": "mean", "format":".1f", "suffix": "%"}, 
+        "Completion on End Date": {"op": "mean", "format":".1f", "suffix": "%"}, 
+        "Cohort Start Date": {"op": "uniq"},
+        "Cohort End Date": {"op": "uniq"},
+        "Id Number": {"op": "count", "format":",d"},
+        "Coach": {"op": "uniq"},
+        "Mentor": {"op": "uniq"},
+        "Trainer": {"op": "uniq"},
+        "BU": {"op": "uniq"}
+      },
+    "text-search-cols":["LP", "BU", "Trainer", "Coach", "Mentor"],
+    "size-col": "Id Number",
+    "color-col": "ICT Average",
+    "sort-col": "Cohort Start Date",
+    "sort-order": "d3.ascending" 
+}
