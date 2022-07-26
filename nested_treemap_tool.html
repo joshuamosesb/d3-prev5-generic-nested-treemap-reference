@@ -60,7 +60,7 @@
     <script>
         $(function(){
             $("#report_container *").remove()
-            d3.json('./config/treemap_config.json', 
+            d3.json('./treemap_config.json', 
                 function(err, conf_do){
                     if(err) throw err; //To-Do: update error handling
                     d3.csv(conf_do["data-file"], function (err, input_do) {
